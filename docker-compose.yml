@@ -24,7 +24,7 @@ services:
       MYSQL_USER: docker
       MYSQL_PASSWORD: docker
       TZ: 'Asia/Tokyo'
-    command: mysql --character-set-server=utf8mb4 --collection-server=utf8mb4_unicode_ci
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     volumes: 
     - ./docker/db/data:/var/lib/mysql
     - ./docker/db/my.conf:/etc/mysql/conf.d/my.conf
